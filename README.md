@@ -13,7 +13,18 @@ Cleaned Netflix Movies and TV Shows dataset from Kaggle using Excel.
 - `data/processed/netflix_clean.xlsx`: Cleaned data
 - `docs/cleaning_steps.md`: Detailed steps
 
-## How to Use
-1. Download the Excel file
-2. Open netflix_clean.xlsx
-3. Review the cleaning steps
+## Tasks Performed
+1.Download the dataset from Kaggle.
+2.Imported the dataset to Excel.
+3.Checked the dataset for any dublicate datas.
+  By using the data tools in data option.
+4.Checked the columns for extra spaces and Standerdizing the names/title of the movies ot tv-series.
+  For Removing extra spaces Formula(=TRIM(INDEX PLACE)).
+  For standersizing the text Formula(=PROPER(INDEX PLACE)).
+5.Removed all Blank values will "Unknown" in the Datasets.
+6. Converted the Added-Date into DateTime format.
+   Formula(=TEXT(DATE(RIGHT(h1,4), MONTH(1 & MID(h1,1,FIND(" ",h1)-1)), MID(h1,FIND(" ",h1)+1,FIND(",",h1)-FIND(" ",h1)-1)), "dd/mm/yyyy").
+7. Removed all the data tangaled between Rating and Duration column .By using Find and Replace method .
+8. Converted the Duration column into two groups Duration_value and Duration_Units.
+
+
